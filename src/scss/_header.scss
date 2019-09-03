@@ -1,0 +1,138 @@
+@import 'hamburger';
+.header {
+    width: 100%;
+    min-height: 900px;
+    background: url(../images/background.png) no-repeat;
+    background-size: cover;
+    padding: 40px 100px;
+   
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+    }
+    &__nav {
+        flex-basis: 784px;
+    }
+    &__nav-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+    }
+    &__nav-link {
+        @include center;
+        padding: 15px 20px;
+        color: #191c1f;
+        font-family: "inherit";
+        font-size: 18px;
+        letter-spacing: 0.36px;
+        &_hover {
+            &:hover {
+                height: 42px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+                background-color: #f0f4f5;
+                border-radius: 3em;
+            }
+        }
+    }
+    &__logo {
+        margin: auto;
+        @include center;
+        flex-direction: column;
+        color: #1c5740;
+        font-weight: 900;
+        @include blockCenter;
+    }
+    &__logo-img {
+        margin-bottom: 15px;
+    }
+    
+    &__select-list {
+        display: block;
+        max-width: 130px;
+        max-height: 42px;
+        color: #191c1f;
+        background-color: #eef1f2;
+        font-size: 18px;
+        letter-spacing: 0.36px;
+        padding: 1px 25px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+        border-radius: 15px;
+        appearance: none;
+        background: url(../images/arrow.png) no-repeat;
+        background-position: right 15px top 50%, 0 0, left 15px top 50%, 0 0;;
+        background-size: 9px 6px;
+        &__select-item {
+            background: url(../images/arrow.png) no-repeat;
+            
+        }
+        &_hover {
+            &:hover {
+                border-color: #888;
+            }
+            &:focus {
+                border: 1px solid #1c5740;
+                box-shadow: 0 0 3px rgba(28, 87, 64, .3);
+                border-radius: 15px;
+                outline: none;
+            }
+        }
+    }
+
+}
+
+
+@media (min-width: 576px) { 
+
+}
+
+
+@media (max-width: 768px) { 
+    .header {
+        padding: 40px 50px;
+        &__nav-list {
+            display: none;
+            height: auto;
+            font-style: 14px;
+            &_show {
+                width: 100%;
+                margin-left: 35px;
+                display: block;
+            }
+        }
+        &__logo {
+            top: 50px;
+            font-size: 0px;
+            z-index: 1;
+        }
+        &__logo-img {
+            width: 35%;
+            height: 35%;
+            margin-bottom: 5px;
+        }
+        &__select-list {
+            max-width: 100px;
+            max-height: 35px;
+            font-size: 14px;
+        }
+    }
+}
+
+@media (min-width: 992px) { 
+    .header {
+        // &__nav-list {
+        //     max-width: 500px;
+        // }
+        &__nav-link,
+        &__select-list {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (min-width: 1200px) { 
+
+}
+
