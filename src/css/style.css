@@ -203,11 +203,19 @@ body {
     .header__nav-list {
       display: none;
       height: auto;
-      font-style: 14px; }
+      font-style: 14px;
+      font-weight: 500; }
       .header__nav-list_show {
         width: 100%;
         margin-left: 40px;
+        margin-top: 30px;
         display: block; }
+    .header__nav-link {
+      background: rgba(28, 87, 64, 0.3);
+      border-bottom: 0.4px solid rgba(128, 128, 128, 0.7); }
+      .header__nav-link_hover:hover {
+        background: rgba(28, 87, 64, 0.7);
+        border-radius: 0; }
     .header__logo {
       top: 50px;
       font-size: 0px;
