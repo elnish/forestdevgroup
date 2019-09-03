@@ -54,7 +54,7 @@
 .hamburger.is-active .hamburger__inner,
 .hamburger.is-active .hamburger__inner:before,
 .hamburger.is-active .hamburger__inner:after {
-	background-color: $mainBgColor; 
+	background-color: $mainColor; 
 }
 .hamburger_emphatic .hamburger-inner {
 	transition: background-color 0.125s 0.175s ease-in; 
