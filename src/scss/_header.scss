@@ -1,24 +1,14 @@
-@import 'hamburger';
 .header {
     width: 100%;
     min-height: 900px;
     background: url(../images/background.png) no-repeat;
     background-size: cover;
     padding: 40px 100px;
-   
-    &__top {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-    }
-    &__nav {
-        flex-basis: 784px;
-    }
     &__nav-list {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
     }
     &__nav-link {
         @include center;
@@ -27,13 +17,14 @@
         font-family: "inherit";
         font-size: 18px;
         letter-spacing: 0.36px;
-        &_hover {
-            &:hover {
-                height: 42px;
-                box-shadow: 0 0 10px $shadowColor;
-                background-color: $hoverColor;
-                border-radius: 3em;
-            }
+        &_hover:hover,
+        &_active {
+            text-decoration: none;
+            color: $linkColor;
+            height: 42px;
+            box-shadow: 0 0 10px $shadowColor;
+            background-color: $hoverColor;
+            border-radius: 3em;
         }
     }
     &__logo {
@@ -50,34 +41,24 @@
     
     &__select-list {
         display: block;
-        max-width: 130px;
-        max-height: 42px;
+        width: 130px;
+        height: 42px;
         color: #191c1f;
         background-color: #eef1f2;
         font-size: 18px;
         letter-spacing: 0.36px;
-        padding: 1px 25px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
-        border-radius: 15px;
-        appearance: none;
-        background: url(../images/arrow.png) no-repeat;
-        background-position: right 15px top 50%, 0 0, left 15px top 50%, 0 0;;
-        background-size: 9px 6px;
-        &__select-item {
-            background: url(../images/arrow.png) no-repeat;
-            
-        }
-        &_hover {
-            &:hover {
-                border-color: #888;
-            }
-            &:focus {
-                border: 1px solid $mainColor;
-                box-shadow: 0 0 3px $shadowColor;
-                border-radius: 15px;
-                outline: none;
-            }
-        }
+        border-radius: 25px;
+    }
+    &__select-menu {
+        background-color: #eef1f2;
+        min-width: 130px;
+    }
+    &__select-flag-icon {
+        background-size: contain;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        margin-right: 5px;
     }
 
 }
@@ -91,60 +72,61 @@
 @media (max-width: 768px) { 
     .header {
         min-height: 100vh;
-        padding: 40px 50px;
+        padding: 40px;
+        background-position: center;
+        &__navbar {
+            position: relative;
+            top: 80px;
+        }
         &__nav-list {
-            display: none;
-            height: auto;
-            font-style: 14px;
-            font-weight: 500;
-            &_show {
-                width: 100%;
-                margin-left: 40px;
-                margin-top: 30px;
-                display: block;
-            }
+            margin-top: 20px;
+            display: block;
+            width: 100%;
         }
         &__nav-link {
-            background: rgba(28, 87, 64, .3);
-            border-bottom: .4px solid rgba(128, 128, 128, .7);
-            &_hover {
-                &:hover {
-                    background: rgba(28, 87, 64, .7);
-                    border-radius: 0;
-                }
+            height: 40px;
+            padding: 0;
+            
+            &_hover:hover,
+            &_active {
+                background-color: rgba(255, 255, 255, .6);
+                box-shadow: none;
+                border-radius: 0;
+            }
+            &_active {
+                background-color: rgba(255, 255, 255, 1);
             }
         }
+        &__select-list {
+            font-size: 14px;
+            width: 110px;
+            height: 35px;
+            position: absolute;
+            top: 10px;
+            right: 0;
+        }
+       
         &__logo {
-            top: 50px;
+            top: 80px;
             font-size: 0px;
             z-index: 1;
         }
         &__logo-img {
             width: 35%;
             height: 35%;
-            margin-bottom: 5px;
-        }
-        &__select-list {
-            max-width: 100px;
-            max-height: 35px;
-            font-size: 14px;
+            
         }
     }
 }
 
-@media (min-width: 992px) { 
+@media (max-width: 1200px) and (min-width: 992px) { 
     .header {
-        // &__nav-list {
-        //     max-width: 500px;
-        // }
-        &__nav-link,
-        &__select-list {
+        &__nav-link {
             font-size: 16px;
+            padding: 15px 10px;
         }
     }
 }
 
-@media (min-width: 1200px) { 
 
-}
 
