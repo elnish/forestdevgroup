@@ -10,6 +10,14 @@
         });
     }
  
+    let container = document.querySelector('[data-current-lnag]');
+    let ua = document.querySelector('[data-ua-lnag]');
+    let ru = document.querySelector('[data-ru-lnag]');
+    let us = document.querySelector('[data-us-lnag]');
 
+    ua.addEventListener('click', () => {
+        ru.classList.remove('flag-icon-ru');
+        ru.classList.add('flag-icon-ua');
+    })
 })();
 
