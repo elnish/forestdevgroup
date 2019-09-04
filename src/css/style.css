@@ -12,7 +12,7 @@ li {
 
 body {
   width: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   font-size: 14px;
   font-weight: 400; }
 
@@ -32,7 +32,7 @@ body {
     align-items: center;
     padding: 15px 20px;
     color: #191c1f;
-    font-family: "inherit";
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 18px;
     letter-spacing: 0.36px; }
     .header__nav-link_hover:hover, .header__nav-link_active {
@@ -50,10 +50,12 @@ body {
     flex-direction: column;
     color: #1c5740;
     font-weight: 900;
+    font-family: 'Helvetica Neue', sans-serif;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    text-decoration: none; }
   .header__logo-img {
     margin-bottom: 15px; }
   .header__select-list {
@@ -62,6 +64,7 @@ body {
     height: 42px;
     color: #191c1f;
     background-color: #eef1f2;
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 18px;
     letter-spacing: 0.36px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
