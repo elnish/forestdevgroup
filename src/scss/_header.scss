@@ -160,6 +160,7 @@
 
 @media (max-width: 576px) { 
     .header {
+        background-image: url(../images/header-background-min.png);
         &__container {
             padding-top: 0;
         }
