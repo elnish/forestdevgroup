@@ -1,10 +1,12 @@
 .header {
-    width: 100%;
-    min-height: 900px;
+    max-width: 100%;
+    min-height: 100vh;
     background: url(../images/header-background.png) no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 40px 100px;
+    background-size: 100%;
+    background-position: top left;
+    &__container {
+        padding-top: 40px;
+    }
     &__nav-list {
         display: flex;
         justify-content: space-between;
@@ -16,29 +18,35 @@
         color: $linkColor;
         font-family: 'Helvetica Neue', sans-serif;
         font-size: 18px;
+        height: 42px;
         letter-spacing: 0.36px;
         &_hover:hover,
         &_active {
             text-decoration: none;
             color: $linkColor;
-            height: 42px;
             box-shadow: 0 0 10px $shadowColor;
             background-color: $hoverColor;
             border-radius: 3em;
         }
     }
     &__logo {
-        margin: auto;
-        @include center;
-        flex-direction: column;
-        color: $mainColor;
-        font-weight: 900;
-        font-family: 'Helvetica Neue', sans-serif;
         @include blockCenter;
-        text-decoration: none;
     }
     &__logo-img {
+        width: 160px;
+        height: 176px;
         margin-bottom: 15px;
+    }
+    &__logo-link {
+        font-weight: 900;
+        font-family: 'Helvetica Neue', sans-serif;
+        color: $mainColor;
+        @include center;
+        flex-direction: column;
+        &:hover {
+            text-decoration: none;
+            color: $mainColor;
+        }
     }
     
     &__select-list {
@@ -79,20 +87,22 @@
 
 @media (max-width: 768px) { 
     .header {
-        min-height: 100vh;
-        padding: 40px;
-        background-position: center;
+        &__container {
+            padding-top: 0;
+        }
         &__navbar {
             position: relative;
             top: 80px;
         }
         &__nav-list {
-            margin-top: 20px;
             display: block;
-            width: 100%;
+            margin: auto;
+            
         }
         &__nav-link {
-            height: 40px;
+            width: 80%;
+            font-size: 16px;
+            height: 30px;
             padding: 0;
             
             &_hover:hover,
@@ -114,22 +124,24 @@
             right: 0;
         }
        
-        &__logo {
-            top: 80px;
-            font-size: 0px;
-            z-index: 1;
-        }
+        
         &__logo-img {
-            width: 35%;
-            height: 35%;
+            width: 80px;
+            height: 93px;
+            margin-bottom: 5px;
             
+        }
+        &__logo-link {
+            font-size: 8px;
         }
     }
 }
 
 @media (max-width: 576px) { 
     .header {
-        padding: 40px 15px;
+        &__container {
+            padding-top: 15px;
+        }
     }
 }
 

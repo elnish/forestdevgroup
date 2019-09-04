@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <header class="header">
+        <header class="header" data-parallax="scroll" data-z-index="-1" data-image-src="./src/images/header-background.png">
             <div class="header__container container">
                 <nav class="header__navbar navbar navbar-expand-lg navbar-light">
                     <button class="header__navbar-toggle navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@
                                 <a href="#" class="header__nav-link header__nav-link_hover">Вакансии</span></a>
                             </li>
                         </ul>
-                        
+                       
                     </div>
                     <ul class="header__select-list">
                         <li class="header__select-item dropdown">
@@ -52,8 +52,12 @@
                         </li>
                     </ul>
                 </nav>
+                <div class="header__logo">
+                    <a href="#" class="header__logo-link"><img class="header__logo-img" src="./src/images/logo.svg" alt="logo">DIGITAL-АГЕНСТВО</a>
+                </div>
+                
             </div>
-            <a href="#" class="header__logo"><img class="header__logo-img" src="./src/images/logo.svg" alt="logo">DIGITAL-АГЕНСТВО</a>
+            
         </header>
         
    
