@@ -1,8 +1,9 @@
 .header {
     width: 100%;
     min-height: 900px;
-    background: url(../images/background.png) no-repeat;
+    background: url(../images/header-background.png) no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     padding: 40px 100px;
     &__nav-list {
         display: flex;
