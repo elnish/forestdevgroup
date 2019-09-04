@@ -39,14 +39,15 @@
         margin-bottom: 15px;
     }
     &__logo-link {
-        font-weight: 900;
+        font-size: 14px;
+        font-weight: 700;
+        color: #1b563f;
         font-family: 'Helvetica Neue', sans-serif;
-        color: $mainColor;
         @include center;
         flex-direction: column;
         &:hover {
             text-decoration: none;
-            color: $mainColor;
+            color: #1b563f;
         }
     }
     
@@ -60,17 +61,27 @@
         font-size: 18px;
         letter-spacing: 0.36px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
-        border-radius: 25px;
+        border-radius: 21px;
+        
+    }
+    &__select-link {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        &:after {
+            margin-top: 3px;
+        }
     }
     &__select-menu {
         background-color: #eef1f2;
         min-width: 130px;
+        
     }
     &__select-flag-icon {
         background-size: contain;
         background-position: 50%;
         background-repeat: no-repeat;
-        margin-right: 5px;
+        margin-right: 11px;
     }
 
 }
@@ -85,7 +96,6 @@
         }
     }
 }
-
 
 @media (max-width: 991px) { 
     .header {
@@ -170,9 +180,12 @@
         }
         &__select-list {
             top: -30px;
-            font-size: 10px;
+            font-size: 12px;
             width: 95px;
             height: 25px;
+        }
+        &__select-link {
+            padding: 3px 5px;
         }
         &__logo {
             top: 40px;
@@ -184,11 +197,11 @@
         }
         &__nav-link {
             font-size: 14px;
-            height: 20px;
+            height: 25px;
             padding: 0;
         }
         &__select-flag-icon {
-            margin-right: 2px;
+            
         }
     }
 }
