@@ -1,7 +1,7 @@
 .header {
     max-width: 100%;
-    min-height: 100vh;
-    background: url(../images/header-background.png) no-repeat;
+    height: 100vh;
+    background: url(../images/fon.png) no-repeat;
     background-size: 100%;
     background-position: top left;
     position: relative;
@@ -50,21 +50,19 @@
             color: #1b563f;
         }
     }
-    
-    &__select-list {
+   
+    &__select-link,
+    &__select-item.dropdown-item {
         display: block;
         width: 130px;
         height: 42px;
         color: #191c1f;
-        background-color: #eef1f2;
         font-family: 'Helvetica Neue', sans-serif;
         font-size: 18px;
         letter-spacing: 0.36px;
+        background-color: #eef1f2;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
         border-radius: 21px;
-        
-    }
-    &__select-link {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -73,9 +71,13 @@
         }
     }
     &__select-menu {
-        background-color: #eef1f2;
+        background-color: transparent;
+        border: none;
         min-width: 130px;
-        
+    }
+    &__select-item.dropdown-item {
+        background-color: #bdd4c4;
+        margin-bottom: 10px;
     }
     &__select-flag-icon {
         background-size: contain;
