@@ -182,9 +182,17 @@
         }
         &__select-list {
             top: -30px;
+            
+        }
+        &__select-link,
+        &__select-item.dropdown-item {
+            top: -30px;
             font-size: 12px;
             width: 95px;
             height: 25px;
+        }
+        &__select-menu {
+            min-width: 95px;
         }
         &__select-link {
             padding: 3px 5px;
@@ -197,11 +205,7 @@
             height: 48px;
             margin-bottom: 5px;
         }
-        &__nav-link {
-            font-size: 14px;
-            height: 25px;
-            padding: 0;
-        }
+       
        
     }
 }

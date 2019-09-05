@@ -154,10 +154,14 @@ body {
     position: absolute;
     top: -40px; }
   .header__select-list {
+    top: -30px; }
+  .header__select-link, .header__select-item.dropdown-item {
     top: -30px;
     font-size: 12px;
     width: 95px;
     height: 25px; }
+  .header__select-menu {
+    min-width: 95px; }
   .header__select-link {
     padding: 3px 5px; }
   .header__logo {
@@ -165,8 +169,4 @@ body {
   .header__logo-img {
     width: 40px;
     height: 48px;
-    margin-bottom: 5px; }
-  .header__nav-link {
-    font-size: 14px;
-    height: 25px;
-    padding: 0; } }
+    margin-bottom: 5px; } }
